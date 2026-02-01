@@ -133,7 +133,7 @@ fi
 # ============================================================
 # UPDATE CONFIG FROM ENVIRONMENT VARIABLES
 # ============================================================
-node << EOFNODE
+node --max-old-space-size=4096 << EOFNODE
 const fs = require('fs');
 
 const configPath = '/root/.clawdbot/clawdbot.json';
